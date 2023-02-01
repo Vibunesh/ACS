@@ -1,0 +1,20 @@
+img{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+.para{
+    width: 75%;
+}
+.image{
+    width: 20%;
+}
+.paragraph{
+    display: flex;
+
+}
+.para2{
+    width: 75%;
+}

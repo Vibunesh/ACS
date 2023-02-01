@@ -1,0 +1,86 @@
+.line1{
+    margin: 2%;
+    height: 100px;
+    display: flex;
+}
+.line1a{
+    width: 29%;
+    background-color: rgb(236, 54, 54);
+    
+}
+.line1b{
+    width: 69%;
+    background-color: rgb(27, 76, 135);
+    margin-left: 20px;
+}
+.line2{
+    background-color: rgb(235, 189, 64);
+    height: 160px;
+    width: 96%;
+    margin-left: 2%;
+}
+.line3{
+    height: 100px;
+    display: flex;
+    margin: 2%;
+    
+}
+.line3a{
+    background-color: rgb(75, 147, 86); 
+    width: 32.3%;
+}
+.line3b{
+    background-color: rgb(44, 35, 95); 
+    width: 32.3%;
+    margin-left: 2%;
+}
+.line3c{
+    background-color: rgb(110, 104, 198); 
+    width: 32.3%;
+    margin-left: 2%;
+}
+.line4{
+    height: 150px;
+    display: flex;
+    margin: 2%;
+}
+.line4a{
+    background-color: rgb(236, 99, 31);
+    width: 49%;
+}
+.line4b{
+    background-color: rgb(238, 215, 62);
+    width: 49%;
+    margin-left: 2%;
+}
+.line5{
+    height: 100px;
+    display: flex;
+    margin: 2%;
+    
+}
+.line5a{
+    background-color: rgb(75, 147, 86); 
+    width: 24%;
+}
+.line5b{
+    background-color: rgb(191, 180, 255); 
+    width: 24%;
+    margin-left: 2%;
+}
+.line5c{
+    background-color: rgb(255, 105, 63); 
+    width: 24%;
+    margin-left: 2%;
+}
+.line5d{
+    background-color: rgb(73, 63, 223); 
+    width: 24%;
+    margin-left: 2%;
+}
+.line6{
+    height: 80px;
+    background-color: rgb(206, 85, 85);
+    width: 96%;
+    margin-left: 2%;
+}
