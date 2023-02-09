@@ -1,0 +1,9 @@
+table{
+    margin: auto;
+    margin-top: 150px;
+    width: 500px;
+    height: 300px; 
+}
+td,tr{
+    text-align: center;
+}
