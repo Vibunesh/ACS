@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel friend list</title>
+    <style>
+      h1{
+        text-align: center;
+      }
+      li{
+       list-style-type: none; 
+			 cursor: pointer; 
+			 font-size: 20px; 
+			 margin-bottom: 10px; 
+			 text-align: center;
+			 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    </style>
+</head>
+<body>
+  
+  <h1>Vowel friend list</h1>
+  <ul>
+    <li onclick="changeColor(this)">vibu</li>
+    <li onclick="changeColor(this)">abi</li>
+    <li onclick="changeColor(this)">vijayesh</li>
+    <li onclick="changeColor(this)">dilli</li>
+    <li onclick="changeColor(this)">vikram</li>
+    <li onclick="changeColor(this)">leo</li>
+    <li onclick="changeColor(this)">obama</li>
+    <li onclick="changeColor(this)">harry</li>
+    <li onclick="changeColor(this)">potter</li>
+    <li onclick="changeColor(this)">isac newton</li>
+  </ul>
+
+  <script>
+    function changeColor(list) {
+      var firstLetter = list.innerHTML[0];
+      if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
+        list.style.backgroundColor = "red";
+      } else {
+        list.style.backgroundColor = "green";
+      }
+    }
+    </script>
+</body>
+</html>
