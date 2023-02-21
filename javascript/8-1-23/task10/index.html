@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task10</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            margin-bottom: 5px;
+        }
+        .a{
+            background-color: cadetblue;
+        }
+        .b{
+            background-color: cornflowerblue;
+        }
+        .c{
+            background-color:dimgray;
+        }
+        .d{
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- creating the boxes using div -->
+    <div class="box a" onclick="disappear(this)"></div>
+    <div class="box b" onclick="disappear(this)"></div>
+    <div class="box c" onclick="disappear(this)"></div>
+    <div class="box d" onclick="disappear(this)"></div>
+    <script>
+        let touchedbox=undefined;
+        function disappear(boxy){
+            //if the touchedbox is not equal to undefined, it display the box otherwise it hide the box.
+        if(touchedbox!==undefined)  {
+            touchedbox.style.display="block";
+        }  
+            boxy.style.display="none"
+            touchedbox=boxy;
+
+        }
+    </script>
+</body>
+</html>
