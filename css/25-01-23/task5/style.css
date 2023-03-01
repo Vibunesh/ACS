@@ -1,12 +1,12 @@
 tr:nth-child(even){
 background-color: rgb(90, 186, 181);
-height: 15px;
+height: 40px;
 }
 tr:nth-child(odd){
-    letter-spacing:10px;
+    letter-spacing:15px;
     }
 table{
-    width: 30%;
+    width: 40%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;

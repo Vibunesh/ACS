@@ -2,13 +2,9 @@ body{
     background-color: aquamarine;
 }
 img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 300px;
     position:absolute;
-    right:10%;
-    top:calc(100% - 200px/2);
-<<<<<<< HEAD
+    right:calc(300px - 220px);
+    top:calc(450px - 290px);
 }
-=======
-}
->>>>>>> 22f70e5da5c346c4021a3598ad55043ecb688482
