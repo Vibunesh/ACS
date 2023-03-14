@@ -1,120 +1,148 @@
 * {
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
 }
+
+section {
+    margin: 20px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#image {
+position: relative;
+width: 45%;
+height: 85%;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+margin-left: 5%;
+margin-right:0;
+margin-top:10px;
+position: absolute;
+right:50%;
+}
+
+#content {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 85%;
+    position:absolute;
+    left:50%;
+    margin-top:10px;
+}
+.right {
+    width: 50%
+}
+
+.right h2 {
+    color: #607d8b;
+    font-weight: 600;
+font-size: 1.5em;
+text-transform: uppercase;
+margin-bottom: 20px;
+border-bottom: 4px solid #ff4584;
+display: inline-block;
+letter-spacing: 1px;
+}
+
+.right .inputbox {
+    margin-bottom: 20px
+}
+
+.inputbox span {
+
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607d8b;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.inputbox input {
+width: 100%;
+padding: 10px 20px;
+outline: none;
+font-weight: 400;
+border: 1px solid #607d8b;
+font-size: 16px;
+letter-spacing: 1px;
+color: #607d8b;
+background: transparent;
+border-radius: 30px;
+}
+.inputbox input[type="submit"] {
+    background: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.check {
+    margin-bottom: 10px;
+    color: #607d8b;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.inputbx p {
+color: #607d8b;
+
+}
+
+.inputbx p a {
+    color: #ff4584
+}
+
+h3 {
+    color: #607d8b;
+    margin: 80px 0 10px;
+    font-weight: 500;
+}
+
 
 body {
-    background: #1281b1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    margin: -20px 0 50px;
-    display:flex;
-    direction: row;
-}
-
-h1 {
-    font-weight: bold;
-    color: #12e747;
-    margin: 0;
-}
-
-p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-}
-
-
-form {
-    background-color: #bbffc4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
-}
-
-input {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.box {
-    background-color: #fff;
-    border-radius: 10px;
-    position: relative;
+    background: whitesmoke;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 430px;
     
 }
-a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-}
-
-button {
-    border-radius: 20px;
-    border: 1px solid #ee5125;
-    background-color: #0cc509;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-}
-
-.form-box {
+.blue{
+    background-color: rgb(183, 100, 255);
+    height:25%;
+    width:100%;
     position: absolute;
-    top: 0;
-    height: 100%;
+    bottom:0px;
+    right:68%;
+
+    
+}
+.pink{
+    background-color:rgb(205, 6, 98);
+    height:25%;
+    width:35%;
+    position: absolute;
+    top:0px;
+    left:68%;
 }
 
-.login {
-    left: 0;
-    width: 50%;
-    z-index: 2;
-}
-
-.social-box {
-    margin: 50px 0;
-}
 
 .social-box a {
-    border: 1px solid #ff7575;
+    background-color: #607d8b;
+    color: white;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin: 0 5px;
-    height: 40px;
-    width: 40px;
-}
-.image {
-width: 200px;
-height: 200px;
-position: absolute;
-top: calc((100% - 300px) /2);
-left: calc((100% + 150px) /2);
-}
-img{
-    width: 250px;
-    height: 250px;
-    
+    height: 50px;
+    width: 50px;
 }
