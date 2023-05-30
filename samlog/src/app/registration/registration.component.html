@@ -1,0 +1,260 @@
+<!-- <body>
+<h2>Sign Up</h2>
+
+<form (ngSubmit)="register()" [formGroup]=" registrationForm">
+  <div  class="form-group">
+    <label for="username">Name:</label>
+    <input type="text" id="username" class="form-control" formControlName="username" required minlength="4">
+    <div *ngIf="registrationForm.get('username')?.invalid && (registrationForm.get('username')?.dirty || registrationForm.get('username')?.touched)">
+      <div *ngIf="registrationForm.get('username')?.errors?.['required']" class="text-danger">Name is required.</div>
+      <div *ngIf="registrationForm.get('username')?.errors?.['minlength']" class="text-danger">Name must have a minimum length of 4 characters.</div>
+    </div>
+  </div>
+  
+  
+
+  <div  class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" class="form-control" formControlName="email" required>
+    <div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+      <div *ngIf="registrationForm.get('email')?.errors?.['required']" class="text-danger">Email is required.</div>
+      <div *ngIf="registrationForm.get('email')?.errors?.['email']" class="text-danger">Invalid email format.</div>
+    </div>
+  </div>
+  
+
+  <div  class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" class="form-control" formControlName="password" required minlength="8">
+    <div *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+      <div *ngIf="registrationForm.get('password')?.errors?.['required']" class="text-danger">Password is required.</div>
+      <div *ngIf="registrationForm.get('password')?.errors?.['minlength']" class="text-danger">Password must have a minimum length of 8 characters.</div>
+    </div>
+  </div>
+  
+
+  <div  class="form-group">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" class="form-control" formControlName="first_name" required>
+    <div *ngIf=" registrationForm.get('first_name')?.invalid && ( registrationForm.get('first_name')?.dirty ||  registrationForm.get('first_name')?.touched)" class="text-danger">
+      <div *ngIf=" registrationForm.get('first_name')?.errors?.['required']" class="text-danger">First Name is required.</div>
+    </div>
+  </div>
+
+  <div>
+
+  
+
+    <div  class="form-group">
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" class="form-control" formControlName="last_name" required>
+      <div *ngIf="registrationForm.get('last_name')?.invalid && (registrationForm.get('last_name')?.dirty || registrationForm.get('last_name')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('last_name')?.errors?.['required']" class="text-danger">Last Name is required.</div>
+      </div>
+    </div>
+    
+    <div>
+      <label for="reg_no">Registration Number:</label>
+      <input type="text" id="reg_no" class="form-control" formControlName="reg_no" required>
+      <div *ngIf="registrationForm.get('reg_no')?.invalid && (registrationForm.get('reg_no')?.dirty || registrationForm.get('reg_no')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('reg_no')?.errors?.['required']" class="text-danger">Registration Number is required.</div>
+      </div>
+    </div>
+    
+    <div>
+      <label for="phonenumber">Phone Number:</label>
+      <input type="text" id="phonenumber" class="form-control" formControlName="phonenumber" required>
+      <div *ngIf="registrationForm.get('phonenumber')?.invalid && (registrationForm.get('phonenumber')?.dirty || registrationForm.get('phonenumber')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('phonenumber')?.errors?.['required']" class="text-danger">Phone Number is required.</div>
+      </div>
+    </div>
+    
+    <div  class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" id="address" class="form-control" formControlName="address" required>
+      <div *ngIf="registrationForm.get('address')?.invalid && (registrationForm.get('address')?.dirty || registrationForm.get('address')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('address')?.errors?.['required']" class="text-danger">Address is required.</div>
+      </div>
+    </div>
+    
+    <div  class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" class="form-control" formControlName="gender" required>
+      <div *ngIf="registrationForm.get('gender')?.invalid && (registrationForm.get('gender')?.dirty || registrationForm.get('gender')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('gender')?.errors?.['required']" class="text-danger">Gender is required.</div>
+      </div>
+    </div>
+
+    <div  class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob" class="form-control" formControlName="dob" required>
+      <div *ngIf="registrationForm.get('dob')?.invalid && (registrationForm.get('dob')?.dirty || registrationForm.get('dob')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('dob')?.errors?.['required']" class="text-danger">Date of Birth is required.</div>
+        
+      </div>
+    </div>
+  <button type="submit" [disabled]="registrationForm.invalid" class="btn btn-primary butt ">Sign Up</button>
+</div>
+</form>
+</body> -->
+
+<form (ngSubmit)="register()" [formGroup]=" registrationForm">
+  <h2>Sign Up</h2>
+  <div class="linehead"></div>
+  <label>
+    <p class="label-txt">ENTER YOUR NAME</p>
+    <input type="text" id="username" class="input" formControlName="username" required minlength="4">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+    <div *ngIf="registrationForm.get('username')?.invalid && (registrationForm.get('username')?.dirty || registrationForm.get('username')?.touched)">
+      <div *ngIf="registrationForm.get('username')?.errors?.['required']" class="text-success">Name is required.</div>
+      <div *ngIf="registrationForm.get('username')?.errors?.['minlength']" class="text-success">Name must have a minimum length of 4 characters.</div>
+    </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR EMAIL</p>
+    <input type="email" id="email" class="input" formControlName="email" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+    <div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+      <div *ngIf="registrationForm.get('email')?.errors?.['required']" class="text-success">Email is required.</div>
+      <div *ngIf="registrationForm.get('email')?.errors?.['email']" class="text-success">Invalid email format.</div>
+    </div>  
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR PASSWORD</p>
+    <input type="password" id="password" class="input" formControlName="password" required minlength="8">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+    <div *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+      <div *ngIf="registrationForm.get('password')?.errors?.['required']" class="text-success">Password is required.</div>
+      <div *ngIf="registrationForm.get('password')?.errors?.['minlength']" class="text-success">Password must have a minimum length of 8 characters.</div>
+    </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR FIRSTNAME</p>
+    <input type="text" id="first_name" class="input" formControlName="first_name" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+    <div *ngIf=" registrationForm.get('first_name')?.invalid && ( registrationForm.get('first_name')?.dirty ||  registrationForm.get('first_name')?.touched)" class="text-danger">
+      <div *ngIf=" registrationForm.get('first_name')?.errors?.['required']" class="text-success">First Name is required.</div>
+    </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR LASTNAME</p>
+    <input type="text" id="last_name" class="input" formControlName="last_name" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="registrationForm.get('last_name')?.invalid && (registrationForm.get('last_name')?.dirty || registrationForm.get('last_name')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('last_name')?.errors?.['required']" class="text-success">Last Name is required.</div>
+      </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR REGISTER NUMBER</p>
+    <input type="text" id="reg_no" class="input" formControlName="reg_no" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="registrationForm.get('reg_no')?.invalid && (registrationForm.get('reg_no')?.dirty || registrationForm.get('reg_no')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('reg_no')?.errors?.['required']" class="text-success">Registration Number is required.</div>
+      </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR PHONE NUMBER</p>
+    <input type="text" id="phonenumber" class="input" formControlName="phonenumber" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="registrationForm.get('phonenumber')?.invalid && (registrationForm.get('phonenumber')?.dirty || registrationForm.get('phonenumber')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('phonenumber')?.errors?.['required']" class="text-success">Phone Number is required.</div>
+      </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR ADDRESS</p>
+    <input type="text" id="address" class="input" formControlName="address" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="registrationForm.get('address')?.invalid && (registrationForm.get('address')?.dirty || registrationForm.get('address')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('address')?.errors?.['required']" class="text-success">Address is required.</div>
+      </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR GENDER</p>
+    <input type="text" id="gender" class="input" formControlName="gender" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="registrationForm.get('gender')?.invalid && (registrationForm.get('gender')?.dirty || registrationForm.get('gender')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('gender')?.errors?.['required']" class="text-success">Gender is required.</div>
+      </div>
+  </label>
+
+  <label>
+    <p class="label-txt">ENTER YOUR DOB</p>
+    <input type="text" id="dob" class="input" formControlName="dob" required>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="registrationForm.get('dob')?.invalid && (registrationForm.get('dob')?.dirty || registrationForm.get('dob')?.touched)" class="text-danger">
+        <div *ngIf="registrationForm.get('dob')?.errors?.['required']" class="text-success">Date of Birth is required.</div>
+ 
+      </div>
+  </label>
+  <div *ngIf="registrationSuccess" class="success-notification">
+    Registration successful! 
+  </div>
+  <div *ngIf="registrationError" class="error-notification">
+  Registration failed. 
+</div>
+
+  
+
+
+  <button type="submit" [disabled]="registrationForm.invalid">Sign Up</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" formControlName="gender" required>
+        <option value="">Select</option>
+        <option value="male">male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <div *ngIf="registrationForm.get('gender')?.invalid && (registrationForm.get('gender')?.dirty || registrationForm.get('gender')?.touched)">
+        <div *ngIf="registrationForm.get('gender')?.errors?.['required']">Gender is required.</div>
+      </div>
+    </div> -->
+    <!-- <div *ngIf="registrationForm.get('dob')?.errors?.['pattern']" class="text-danger">Invalid date format.</div> -->

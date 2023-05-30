@@ -1,0 +1,89 @@
+<!-- <div class="container formone" >
+  <h2 class=" mb-2 " style="text-align: center;">Login Form</h2><br>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      
+      <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter email" formControlName="email">
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+        <div *ngIf="email?.errors?.['required']">Email is required.</div>
+        <div *ngIf="email?.errors?.['email']">Invalid email format.</div>
+      </div><br>
+    </div>
+    <div class="form-group">
+      
+      <input type="password" class="form-control form-control-lg" id="password" placeholder="Password" formControlName="password">
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
+        <div *ngIf="password?.errors?.['required']">Password is required.</div>
+      </div>
+    </div>
+    
+    <div class="text-center"><button type="submit" class="btn btn-primary butt" [disabled]="loginForm.invalid">Submit</button></div><br>
+  </form>
+
+  <p class="text-center">New user?<a href="#" routerLink="/registration">Register</a></p>
+  <br>
+  <a class="text-center" routerLink="/forget-password">Forgot Password?</a>
+</div>
+ -->
+
+
+
+
+
+ <div class="w-100 bg">
+    
+ <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2>Login</h2>
+  <div class="linehead"></div>
+  <label>
+    <p class="label-txt">ENTER YOUR EMAIL OR USERNAME</p>
+    <input type="email" class="input" id="email"  formControlName="email" >
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-success">
+        <div *ngIf="email?.errors?.['required']" class="text-success">Email is required.</div>
+        <div *ngIf="email?.errors?.['email']" class="text-success">Invalid email format.</div>
+      </div> 
+  </label>
+
+  <label class="password-field">
+    <p class="label-txt">ENTER YOUR PASSWORD</p>
+    <div class="password-input">
+      <input type="{{ passwordHidden ? 'password' : 'text' }}" class="input" id="password" formControlName="password">
+      <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+        <i class="fa" [ngClass]="passwordHidden ? 'fa-eye' : 'fa-eye-slash'"></i>
+      </button>
+    </div>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+      <div *ngIf="password?.errors?.['required']" class="text-success">Password is required.</div>
+    </div>
+  </label>
+  
+  
+
+  <div class="form-group">
+    <label>
+      <input type="checkbox" formControlName="rememberMe" value="rememberMe"> Remember Me
+    </label>
+  </div>
+
+  <div *ngIf="loginSuccess" class="success-notification">
+    Login successful!
+  </div>
+  <div *ngIf="loginError" class="error-notification">
+    Login error:{{ errorMessage }}<br>
+    please check it out
+  </div>
+ 
+  <button class="but" type="submit" [disabled]="loginForm.invalid">Submit</button>
+  <p class="text-center" id="low">New user?<a href="#" routerLink="/registration">Sign Up</a> </p>
+  
+  <p class="text-center"><a routerLink="/forget-password" >Forgot Password?</a></p>  
+  </form>
+
+  
+</div>
