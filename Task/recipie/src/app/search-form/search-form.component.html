@@ -1,0 +1,98 @@
+
+<div class="container">
+  <h1 class="text-center display-4 mb-4">Recipe Search</h1>
+
+
+  <form (ngSubmit)="searchRecipes()" class="d-flex justify-content-center mb-4">
+    <div class="input-group">
+      <input type="text" [(ngModel)]="searchTerm" name="searchTerm" placeholder="Enter a search term" class="form-control">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+  
+  
+  
+
+  <div *ngIf="searchResults" class="row">
+    <div class="col-12">
+      <ul class="list-inline d-flex flex-wrap">
+        <li *ngFor="let recipe of searchResults" class="list-inline-item mb-4" (click)="getRecipeInformation(recipe.id)">
+          <div class="card" style="width: 8rem;"> 
+            <img class="card-img-top img-fluid" src="{{ recipe.image }}" alt="{{ recipe.title }}" style="max-height: 6rem;"> <!-- Adjust the max-height of the image -->
+            <div class="card-body">
+              <p class="card-title" style="font-size: 0.8rem;">{{ recipe.title }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  
+
+  <div *ngIf="selectedRecipe" class="card mb-4">
+    <div class="card-body">
+
+      <div class="container text-center">
+        <div class="recipe-details">
+          <h2 class="card-title">Selected Recipe:</h2>
+          <h3>{{ selectedRecipe.title }}</h3>
+          <img [src]="selectedRecipe.image" alt="Recipe Image" class="img-fluid rounded ">
+          <p class="card-text">Cooking Time: {{ selectedRecipe.readyInMinutes }} minutes</p>
+          <p class="card-text">Servings: {{ selectedRecipe.servings }}</p>
+        </div>
+      </div>
+      
+      
+      
+      
+
+      <div class="options">
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            <button class="nav-link" (click)="showIngredientsOption()">Ingredients</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="showInstructionsOption()">Instructions</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="showNutritionalInfoOption()">Nutritional Information</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card recipe-details mt-4">
+        <div class="card-body">
+          <div *ngIf="option === 'ingredients'">
+            <h4 class="mb-3">Ingredients:</h4>
+            <ul class="list-group">
+              <li *ngFor="let ingredient of selectedRecipe.extendedIngredients" class="list-group-item">{{ ingredient.original }}</li>
+            </ul>
+          </div>
+      
+          <div *ngIf="option === 'instructions'">
+            <h4 class="mb-3">Instructions:</h4>
+            <ol class="list-group">
+              <li *ngFor="let step of selectedRecipe.analyzedInstructions[0].steps" class="list-group-item">{{ step.step }}</li>
+            </ol>
+          </div>
+      
+          <div *ngIf="option === 'nutritionalInfo'">
+            <h4 class="mb-3">Nutritional Information:</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Calories: {{ analyzedRecipe.calories }}</li>
+              <li class="list-group-item">Protein: {{ analyzedRecipe.protein }}</li>
+              <li class="list-group-item">Fat: {{ analyzedRecipe.fat }}</li>
+              <li class="list-group-item">Carbohydrates: {{ analyzedRecipe.carbs }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+    </div>
+  </div>
+</div>
+
